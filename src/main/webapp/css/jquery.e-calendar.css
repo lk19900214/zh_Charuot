@@ -1,0 +1,161 @@
+.calendar  * {
+    font-family: "微软雅黑";
+    font-size: 12px;
+    color:#666666;
+}
+.calendar-sm {
+    cursor: default;
+    width: 800px;
+    height: 370px;
+}
+.calendar {
+    cursor: default;
+    width: 252px;
+    margin:0 -2px;
+    overflow:hidden;
+    height:205px;
+}
+
+.calendar-sm .c-pad-top {
+}
+
+.calendar .c-pad-top {
+
+}
+
+.c-grid {
+    height: inherit;
+}
+.c-day {
+    width: 35px;
+    height:24px; line-height:24px;
+    *display:inline;
+    float: left;
+    text-align: center;
+    border:1px solid #d0d0d0;
+    margin-left:-1px;
+    margin-top:-1px;
+    color:#626262;
+}
+
+.c-day-previous-month {
+    width: 35px;
+    height:24px; line-height:24px;
+    float: left;
+    color:#d0d0d0;
+    text-align: center;
+    border:1px solid #d0d0d0;
+    margin-left:-1px;
+    margin-top:-1px;
+    *display:inline;
+    overflow:hidden; text-indent:-999999px;
+}
+
+.c-day-next-month {
+    width: 35px;
+    height:24px; line-height:24px;
+    color:#d0d0d0;
+    float: left;
+    text-align: center;
+    border:1px solid #d0d0d0;
+    margin-left:-1px;
+    margin-top:-1px;
+    *display:inline;
+    overflow:hidden; text-indent:-999999px;
+}
+
+.c-grid-title {
+    float: left; *display:inline;
+    border-bottom:1px solid #d0d0d0;
+    line-height:29px; height:29px;
+}
+
+.c-week-day {
+    width: 35px;
+    height:26px; line-height:26px; text-align:center;
+    float: left;
+    *display:inline;
+    border-left:1px solid #fff;
+    border-right:1px solid #fff;
+    margin-left:-1px;
+}
+
+.c-next {
+    font-family:"宋体";
+    width:32px;
+    text-align: center;
+    cursor: pointer;
+    display:none;
+}
+
+.c-previous {
+    font-family:"宋体";
+    width:32px;
+    text-align: center;
+    cursor: pointer;
+    display:none;
+}
+
+.c-month {
+    width: 100%;
+    text-align: center;
+    position:relative;
+}
+
+.c-nav-btn-over {
+
+}
+
+.c-today {
+
+}
+
+.c-event {
+    background:url(../images/curr.png) no-repeat center center;
+}
+
+
+.c-event-grid {
+    display:none;
+    margin-left: 1px;
+    height: inherit;
+    float: left;
+    box-shadow: 2px 2px 5px #888888;
+}
+
+.c-event-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(135, 155, 188);
+}
+
+.c-event-body {
+    background-color: #EFF4F9;
+}
+
+.c-event-list {
+    overflow: auto;
+}
+
+.c-event-item > .title {
+    font-weight: bold;
+}
+
+.c-event-item > div {
+    text-overflow: ellipsis;
+    width: inherit;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.c-event-item {
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.c-event-over {
+}
+
+.c-event-over > .description {
+}

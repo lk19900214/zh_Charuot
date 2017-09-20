@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="zh_Charuot:war">
+    <output-path>$PROJECT_DIR$/../zh_Charuot/target</output-path>
+    <root id="archive" name="zh_Charuot.war">
+      <element id="artifact" artifact-name="zh_Charuot:war exploded" />
+    </root>
+  </artifact>
+</component>
