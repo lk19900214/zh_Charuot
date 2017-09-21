@@ -4,11 +4,16 @@
     <bookmark url="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/details.jsp" line="362" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8858a1b-7906-4d9b-8640-9843aaf0be74" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/details.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/sea.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/share.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/template-min.js" />
+    <list default="true" id="e8858a1b-7906-4d9b-8640-9843aaf0be74" name="Default" comment="lal">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/clearing.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/coupon.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/birthday.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/cart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/settle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/nom.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/oreder.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/shoppingcar.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zh_Charuot/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../zh_Charuot/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../zh_Charuot/out/" />
@@ -21,7 +26,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="coupon.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/coupon.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6048">
+              <caret line="252" column="136" lean-forward="false" selection-start-line="252" selection-start-column="136" selection-end-line="252" selection-end-column="136" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#2;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#3;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#4;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -29,8 +53,8 @@
         <option value="Singleton" />
         <option value="Class" />
         <option value="CSS File" />
-        <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -48,6 +72,9 @@
       <find>side</find>
       <find>kongzhong.pn</find>
       <find>wars</find>
+      <find>warsage</find>
+      <find>war</find>
+      <find>warsag</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,6 +125,11 @@
         <option value="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/sea.js" />
         <option value="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/template-min.js" />
         <option value="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/details.jsp" />
+        <option value="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/nom.jsp" />
+        <option value="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/oreder.jsp" />
+        <option value="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/shoppingcar.jsp" />
+        <option value="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/clearing.jsp" />
+        <option value="$PROJECT_DIR$/../zh_Charuot/src/main/webapp/coupon.jsp" />
       </list>
     </option>
   </component>
@@ -130,7 +162,7 @@
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="1452" />
     <option name="height" value="876" />
@@ -151,7 +183,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,6 +216,42 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="zh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zh_Charuot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zh_Charuot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zh" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zh_Charuot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zh_Charuot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zh" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zh_Charuot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zh_Charuot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zh" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zh_Charuot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zh_Charuot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zh" type="462c0819:PsiDirectoryNode" />
+              <item name="zhdao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zh_Charuot" type="b2602c69:ProjectViewProjectNode" />
@@ -244,9 +312,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,15 +338,15 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\zh_Charuot\src\main\webapp\WEB-INF\view" />
-      <recent name="C:\zh_Charuot\src\main\webapp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\zh_Charuot\src\main\webapp\js" />
       <recent name="C:\zh_Charuot\src\main\webapp\img" />
       <recent name="C:\zh_Charuot\src\main\webapp" />
       <recent name="C:\zh_Charuot\src\main\webapp\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\zh_Charuot\src\main\webapp\WEB-INF\view" />
+      <recent name="C:\zh_Charuot\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -442,7 +510,8 @@
       <updated>1505866072385</updated>
       <workItem from="1505866074475" duration="18460000" />
       <workItem from="1505905758853" duration="5351000" />
-      <workItem from="1505982658503" duration="4704000" />
+      <workItem from="1505982658503" duration="4866000" />
+      <workItem from="1505993576681" duration="3704000" />
     </task>
     <task id="LOCAL-00001" summary="lal">
       <created>1505911741451</created>
@@ -451,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505911741452</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lal">
+      <created>1505992085612</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1505992085613</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -460,10 +536,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28515000" />
+    <option name="totallyTimeSpent" value="32381000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1452" height="876" extended-state="0" />
+    <frame x="-4" y="-4" width="1448" height="880" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -479,14 +555,14 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.4948718" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5051282" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2539342" sideWeight="0.4857143" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2532097" sideWeight="0.51428574" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.4972299" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39290407" sideWeight="0.4972299" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -514,65 +590,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/java/com/zh/zhdao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/java/com/zh/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/java/com/zh/entity/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/java/com/zh/entity/CommonaEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/login-handler-kz-qrc-3.0-min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="16" column="1019" lean-forward="false" selection-start-line="16" selection-start-column="1019" selection-end-line="16" selection-end-column="1019" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/login-handler-kz-ums-3.0-min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/css/register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3336">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
@@ -584,7 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -708,9 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -718,7 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6192">
           <caret line="260" column="0" lean-forward="true" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,21 +738,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="0" column="180" lean-forward="true" selection-start-line="0" selection-start-column="180" selection-end-line="0" selection-end-column="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7884">
+          <caret line="373" column="15" lean-forward="true" selection-start-line="373" selection-start-column="15" selection-end-line="373" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/zhanche.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/WEB-INF/view/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7908">
+          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <folding>
+            <marker date="1505894670194" expanded="true" signature="454:530" ph="..." />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/zhan.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/WEB-INF/view/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="205" column="31" lean-forward="false" selection-start-line="205" selection-start-column="31" selection-end-line="205" selection-end-column="31" />
+          <folding>
+            <marker date="1505894670188" expanded="true" signature="2033:2102" ph="..." />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/login2.png">
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="285" column="56" lean-forward="false" selection-start-line="285" selection-start-column="22" selection-end-line="285" selection-end-column="56" />
+          <folding>
+            <marker date="1505909342113" expanded="true" signature="1900:1913" ph="..." />
+            <marker date="1505909342113" expanded="true" signature="8268:8281" ph="..." />
+            <marker date="1505909342113" expanded="true" signature="8969:8982" ph="..." />
+            <marker date="1505909342113" expanded="true" signature="9727:9740" ph="..." />
+            <marker date="1505909342113" expanded="true" signature="10428:10441" ph="..." />
+            <marker date="1505909342113" expanded="true" signature="11189:11202" ph="..." />
+            <marker date="1505909342113" expanded="true" signature="11890:11903" ph="..." />
+            <marker date="1505909342113" expanded="true" signature="14857:14870" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/js/birthday.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149">
+          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/reg_logo.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -756,6 +810,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/login1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/login2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/login3.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -795,17 +859,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/reg_head.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/re_bg.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/reg_left_bg.jpg">
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/reg_head.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -815,20 +874,35 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/reg_left_bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/reg_left_tabsbg.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/reg_logo.png">
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/zhanche.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/details.jsp">
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/zhan.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/img/wargaming.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/nom.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7884">
-          <caret line="373" column="15" lean-forward="true" selection-start-line="373" selection-start-column="15" selection-end-line="373" selection-end-column="15" />
+        <state relative-caret-position="379">
+          <caret line="1494" column="336" lean-forward="false" selection-start-line="1494" selection-start-column="336" selection-end-line="1494" selection-end-column="336" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -836,48 +910,71 @@
             <element signature="n#style#0;n#a#2;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#3;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#4;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#dt#0;n#dl#0;n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#dt#0;n#dl#0;n#div#1;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#1;n#dt#0;n#dl#0;n#div#1;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#dt#0;n#dl#0;n#div#1;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#em#0;n#i#0;n#b#0;n#div#1;n#div#1;n#dt#0;n#dl#0;n#div#1;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#2;n#dt#2;n#dl#0;n#div#1;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1505994519714" expanded="true" signature="2296:2309" ph="..." />
+            <marker date="1505994519714" expanded="true" signature="6274:6288" ph="..." />
+            <marker date="1505994519714" expanded="true" signature="7615:7629" ph="..." />
+            <marker date="1505994519714" expanded="true" signature="12060:12066" ph="&amp;nbsp;" />
+            <marker date="1505994519714" expanded="true" signature="12066:12072" ph="&amp;nbsp;" />
+            <marker date="1505994519714" expanded="true" signature="12610:12616" ph="&amp;nbsp;" />
+            <marker date="1505994519714" expanded="true" signature="12616:12622" ph="&amp;nbsp;" />
+            <marker date="1505994519714" expanded="true" signature="40194:40208" ph="..." />
+            <marker date="1505994519714" expanded="true" signature="40735:40747" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/oreder.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#4;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/WEB-INF/view/register.jsp">
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/shoppingcar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7908">
-          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        <state relative-caret-position="300">
+          <caret line="186" column="95" lean-forward="false" selection-start-line="186" selection-start-column="95" selection-end-line="186" selection-end-column="95" />
           <folding>
-            <marker date="1505894670194" expanded="true" signature="454:530" ph="..." />
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/WEB-INF/view/login.jsp">
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/clearing.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="205" column="31" lean-forward="false" selection-start-line="205" selection-start-column="31" selection-end-line="205" selection-end-column="31" />
-          <folding>
-            <marker date="1505894670188" expanded="true" signature="2033:2102" ph="..." />
-          </folding>
+        <state relative-caret-position="147">
+          <caret line="269" column="42" lean-forward="true" selection-start-line="269" selection-start-column="42" selection-end-line="269" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/../zh_Charuot/src/main/webapp/coupon.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="285" column="56" lean-forward="false" selection-start-line="285" selection-start-column="22" selection-end-line="285" selection-end-column="56" />
+        <state relative-caret-position="6048">
+          <caret line="252" column="136" lean-forward="false" selection-start-line="252" selection-start-column="136" selection-end-line="252" selection-end-column="136" />
           <folding>
-            <marker date="1505909342113" expanded="true" signature="1900:1913" ph="..." />
-            <marker date="1505909342113" expanded="true" signature="8268:8281" ph="..." />
-            <marker date="1505909342113" expanded="true" signature="8969:8982" ph="..." />
-            <marker date="1505909342113" expanded="true" signature="9727:9740" ph="..." />
-            <marker date="1505909342113" expanded="true" signature="10428:10441" ph="..." />
-            <marker date="1505909342113" expanded="true" signature="11189:11202" ph="..." />
-            <marker date="1505909342113" expanded="true" signature="11890:11903" ph="..." />
-            <marker date="1505909342113" expanded="true" signature="14857:14870" ph="..." />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#2;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#3;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#4;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
