@@ -5,13 +5,13 @@
     <title>空中网通行证</title>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <link type="text/css" rel="stylesheet"
-          href="../../css/base.css" />
+          href="css/base.css" />
     <link type="text/css" rel="stylesheet"
-          href="../../css/register.css" />
+          href="css/register.css" />
     <link rel="stylesheet"
-          href="../../css/css.css">
+          href="css/css.css">
     <script
-            src="../../js/detectmobilebrowser.js">
+            src="js/detectmobilebrowser.js">
 
     </script>
     <style type="text/css">
@@ -188,11 +188,11 @@
     </div>
 </div>
 <script
-        src="../../js/jquery-3.2.1.min.js"></script>
+        src="js/jquery-3.2.1.min.js"></script>
 <script
-        src="../../js/login-handler-kz-ums-3.0-min.js"></script>
+        src="js/login-handler-kz-ums-3.0-min.js"></script>
 <script
-        src="../../js/login-handler-kz-qrc-3.0-min.js"></script>
+        src="js/login-handler-kz-qrc-3.0-min.js"></script>
 <script type="text/javascript">
     KZLoginHandler.loginServer = KZQRCLoginHandler.loginServer = "https://sso.kongzhong.com";
     KZLoginHandler.service = KZQRCLoginHandler.service = "https://passport.kongzhong.com/";

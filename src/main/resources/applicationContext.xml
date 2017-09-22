@@ -10,54 +10,96 @@
 		http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/tx
 		http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
-
-    <context:component-scan base-package="com.zh.entity,com.zh.zhdao"/>
+   <!--扫描所有的包-->
+    <context:component-scan base-package="com.zh">
+    <!--不包含控制器-->
+    <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
     <!-- 引入jdbc配置文件db.properties -->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:db.properties"/>
     </bean>
 
-    <!-- 使用spring jdbc中的类建立数据源 -->
-    <bean id="ds" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="${db.driver}"/>
-        <property name="url" value="${db.url}"/>
-        <property name="username" value="${db.user}"/>
-        <property name="password" value="${db.password}"/>
-        <!-- 初始化连接大小 -->
-        <property name="initialSize" value="${db.initialSize}"/>
-        <!-- 连接池最大数量 -->
-        <property name="maxActive" value="${db.maxActive}"/>
-        <!-- 连接池最大空闲 -->
-        <property name="maxIdle" value="${db.maxIdle}"/>
-        <!-- 连接池最小空闲 -->
-        <property name="minIdle" value="${db.minIdle}"/>
-        <!-- 获取连接最大等待时间 -->
-        <property name="maxWait" value="${db.maxWait}"/>
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driverClass}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.user}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!-- 开启Druid的监控统计功能 -->
+        <property name="filters" value="stat"/>
+
+        <property name="maxActive" value="20"/>
+        <property name="initialSize" value="1"/>
+        <property name="maxWait" value="60000"/>
+        <property name="minIdle" value="1"/>
+
+        <property name="timeBetweenEvictionRunsMillis" value="60000"/>
+        <property name="minEvictableIdleTimeMillis" value="300000"/>
+
+        <property name="validationQuery" value="SELECT 'x'"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
     </bean>
 
     <!-- SqlSessionFactory -->
     <bean id="sf" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="ds"/>
-        <!-- com.entity.Student 可以写 sutdent -->
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+        <!--别名类型置是制定的包-->
         <property name="typeAliasesPackage" value="com.zh.entity"/>
-    </bean>
-    <!-- SqlSession -->
-    <bean id="session" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg index="0" ref="sf"/>
+        <!--引入插件-->
+        <property name="plugins">
+        <array>
+        <!--分页插件-->
+        <bean class="com.github.pagehelper.PageHelper">
+            <!-- 这里的几个配置主要演示如何使用，如果不理解，一定要去掉下面的配置 -->
+            <property name="properties">
+                <value>
+                    <!--方言-->
+                    dialect=mysql
+                    <!--reasonable=true-->
+                    <!--supportMethodsArguments=true-->
+                    <!--params=count=countSql-->
+                    <!--autoRuntimeDialect=true-->
+                </value>
+            </property>
+        </bean>
+        </array>
+        </property>
     </bean>
 
-    <!-- 扫描mapper包 自动在spring中生成 xxxxMapper bean -->
+    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--基础包-->
+        <property name="basePackage" value="com.zh.mapper"/>
+        <!-- 3.2.2版本新特性，markerInterface可以起到mappers配置的作用，详细情况需要看Marker接口类 -->
+        <property name="markerInterface" value="com.zh.util.MyMapper"/>
+        <!-- 通用Mapper通过属性注入进行配置，默认不配置时会注册Mapper<T>接口
+        <property name="properties">
+            <value>
+                mappers=tk.mybatis.mapper.common.Mapper
+            </value>
+        </property>
+        -->
+    </bean>
+
+    <!-- SqlSession -->
+    <!--<bean id="session" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sf"/>
+    </bean>-->
+
+   <!-- &lt;!&ndash; 扫描mapper包 自动在spring中生成 xxxxMapper bean &ndash;&gt;
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.zh.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sf"/>
-    </bean>
+    </bean>-->
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="ds"/>
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-        <property name="dataSource" ref="ds"/>
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>

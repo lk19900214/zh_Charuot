@@ -387,7 +387,7 @@
 }
 .comTitle .pTitle,.comTitle .pPrice,.comTitle .buyNum {
     float:left;
-    display:*inline;
+    display:inline;
     font-weight:bold;
     line-height:20px;
 }

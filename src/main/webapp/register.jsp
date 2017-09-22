@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title>用户注册</title>
-    <link type="text/css" rel="stylesheet" href="../../css/base.css"/>
-    <link type="text/css" rel="stylesheet" href="../../css/register.css"/>
-    <script src="../../js/detectmobilebrowser.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/base.css"/>
+    <link type="text/css" rel="stylesheet" href="css/register.css"/>
+    <script src="js/detectmobilebrowser.js"></script>
     <!--[if lte IE 6]>
    <script src="js/png.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -91,8 +91,9 @@
                     <div class="t_line">
                         <div class="l_list wone_zc1">验证码：</div>
                         <div class="r_list wtwo_zc1" style="position:relative;">
-                            <div class="input_text"><input id="vcode" name="vcode" type="text" class="dis-ime-mode" maxlength="6"></div>
-                            <input type="button" id="sms_code_btn" value="获取验证码" class="txtCenter getVali">
+                            <div class="input_text"><input id="vcode" name="vcode" type="text" class="dis-ime-mode" maxlength="4" style="width: 100px"></div>
+                             <img src=""  class="txtCenter getVali">
+                            <%--<input type="button" id="sms_code_btn" value="获取验证码" class="txtCenter getVali">--%>
                             <div id="vcodeTip"></div>
                         </div>
                     </div>
@@ -162,7 +163,7 @@
                     </div>
                     <div class="ts_text" id="accimgcodeTip"></div>
                     <div class="t_line">
-                        <a id="accimgcodebtn" style="cursor:pointer" class="btn_10" eln="next_btn_el"><span class="fsdx">发送短信验证码</span></a>
+                        <a id="accimgcodebtn" style="cursor:pointer" class="btn_10" eln="next_btn_el"><span class="fsdx">获取验证码</span></a>
                     </div>
                 </div>
             </div>
@@ -176,7 +177,7 @@
     /*$("#acc_imgcode").click(function(){
         $("#acc_imgcode").attr("src","/ajax/imgcode/sms?timesamp="+Math.random());
     });*/
-    $("#sms_code_btn").click(function(){
+   /* $("#sms_code_btn").click(function(){
         //kztype="fsyzm phone reg useraccount"
         var phone=$("#useraccount").val();
         if(phone!=""){
@@ -186,7 +187,7 @@
         }else{
             $.formValidator.showTips($("#useraccountTip"),"err",tips.phone.err_null);
             return false;
-        }
+        }*/
      /*   $("#vcode_txt").val("");
         //$("#accimgcodeTip").text("请填写验证码");
         $("#acc_imgcode").click();
@@ -196,7 +197,7 @@
             height:145,
             contentType:"div"
         })*/
-    });
+   /* });*/
     $("#accimgcodebtn").click(function(){
         var phone=$("#useraccount").val();
         var imgcode=$("#vcode_txt").val();

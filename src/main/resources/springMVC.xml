@@ -6,34 +6,193 @@
 			http://www.springframework.org/schema/context/spring-context-4.3.xsd
 			http://www.springframework.org/schema/mvc
 			http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+    <context:annotation-config />
+    <!-- 扫描识别包下包含的注解类 @Controller -->
+    <context:component-scan base-package="com.zh.controller">
+
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>
+    </context:component-scan>
+
+    <!-- 如果发现是静态资源的请求，就将该请求转由Web应用服务器默认的Servlet处理，
+        如果不是静态资源的请求，才由DispatcherServlet继续处理。-->
+    <mvc:default-servlet-handler/>
+
+    <!-- 将静态资源的处理经由Spring MVC框架交回Web应用服务器处理 -->
+    <!--<mvc:resources mapping="/resources/**" location="/resources/"/>-->
+
+    <!--RequestMappingHandlerAdapter-->
     <mvc:annotation-driven>
-        <mvc:message-converters register-defaults="true">
-            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
-                <property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
-            </bean>
+        <mvc:message-converters>
+            <!-- 转换字符串中文的 从请求和响应读取/编写字符串。默认情况下，它支持媒体类型 text/* 并使用文本/无格式内容类型编写。 -->
+            <ref bean="stringHttpMessageConverter"/>
+            <!-- 转换XML 使用 Spring 的 marshaller/un-marshaller 读取/编写 XML 数据。它转换媒体类型为 application/xml 的数据。-->
+            <ref bean="marshallingHttpMessageConverter"/>
+            <!-- 转换json 使用 Jackson 的 ObjectMapper 读取/编写 JSON 数据。它转换媒体类型为 application/json 的数据。-->
+            <ref bean="mappingJackson2HttpMessageConverter"/>
         </mvc:message-converters>
     </mvc:annotation-driven>
+    <!--转换器-->
+    <!--that can read and write Strings from the HTTP request and response.-->
+    <bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
+        <constructor-arg value="UTF-8" />
+    </bean>
 
-    <!-- 配置自动扫描的包 -->
-    <context:component-scan base-package="com.zh.controller" />
+    <!--XML的转换需要使用Spring的 Marshaller 和 Unmarshaller.-->
+    <bean id="marshallingHttpMessageConverter" class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+        <property name="marshaller" ref="xstreamMarshaller"/>
+        <property name="unmarshaller" ref="xstreamMarshaller"/>
+        <!--<property name="marshaller" ref="castorMarshaller"/>-->
+        <!--<property name="unmarshaller" ref="castorMarshaller"/>-->
+    </bean>
 
-    <!-- 访问静态资源 -->
-    <mvc:resources mapping="/img/**" location="/img/" cache-period="2592000"/>
-    <mvc:resources mapping="/css/**" location="/css/" cache-period="2592000"/>
-    <mvc:resources mapping="/js/**" location="/js/" cache-period="2592000"/>
-    <mvc:resources mapping="/zhanche.ico" location="/zhanche.ico" cache-period="2592000"/>
+    <!-- JSON的转换. -->
+    <bean id="mappingJackson2HttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>application/json</value>
+                <value>application/xml</value>
+                <value>text/html</value>
+                <value>text/plain</value>
+                <value>text/xml</value>
+            </list>
+        </property>
+    </bean>
+    <!--信息转换 - 结束-->
 
-    <!-- spring mvc 文件上传支持 -->
+    <bean id="xstreamMarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
+        <!--  启用annotation -->
+        <property name="autodetectAnnotations" value="true"/>
+        <!-- 类名别名 -->
+        <property name="aliases">
+            <map>
+                <!-- MenuDo这个类的别名就变成了menu，那么转换后的xml中就是menu -->
+                <entry key="menu" value="com.zh.entity.UserDo"/>
+            </map>
+        </property>
+        <!-- 基本属性别名 -->
+        <property name="fieldAliases">
+            <map>
+                <!-- MenuDo中的typeName这个属性 -->
+                <entry key="com.zh.entity.typeName" value="typeNameABC"/>
+            </map>
+        </property>
+    </bean>
+
+    <!--<bean id="xStreamMarshallingView" name="xStreamMarshallingView" class="org.springframework.web.servlet.view.xml.MarshallingView">-->
+    <!--<property name="marshaller">-->
+    <!--<bean class="org.springframework.oxm.xstream.XStreamMarshaller">-->
+    <!--&lt;!&ndash;  启用annotation &ndash;&gt;-->
+    <!--<property name="autodetectAnnotations" value="true"/>-->
+    <!--&lt;!&ndash; 类名别名 &ndash;&gt;-->
+    <!--<property name="aliases">-->
+    <!--<map>-->
+    <!--&lt;!&ndash; MenuDo这个类的别名就变成了menu，那么转换后的xml中就是menu &ndash;&gt;-->
+    <!--<entry key="menu" value="com.fengze.shop.model.MenuDo"/>-->
+    <!--</map>-->
+    <!--</property>-->
+    <!--&lt;!&ndash; 基本属性别名 &ndash;&gt;-->
+    <!--<property name="fieldAliases">-->
+    <!--<map>-->
+    <!--&lt;!&ndash; MenuDo中的brithday这个属性 &ndash;&gt;-->
+    <!--<entry key="com.fengze.shop.model.MenuDo.typeName" value="typeNameABC"/>-->
+    <!--</map>-->
+    <!--</property>-->
+    <!--</bean>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+    <bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+        <!--如果所有的mediaType都没匹配上，就会使用defaultContentType-->
+        <property name="defaultContentType" value="text/html"/>
+        <!--这里是否忽略掉accept header，默认就是false-->
+        <property name="ignoreAcceptHeader" value="true"/>
+        <!--这里是是否启用扩展名支持，默认就是true /user/{userid}.json-->
+        <property name="favorPathExtension" value="true"/>
+        <!--这里是是否启用参数支持，默认就是true  /user/{userid}?format=json-->
+        <property name="favorParameter" value="false"/>
+        <property name="mediaTypes">
+            <map>
+                <entry key="atom" value="application/atom+xml"/>
+                <entry key="html" value="text/html"/>
+                <entry key="json" value="application/json"/>
+                <entry key="xml" value="application/xml" />
+            </map>
+        </property>
+    </bean>
+
+    <!--内容协商-->
+    <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="order" value="0"/>
+        <property name="contentNegotiationManager" ref="contentNegotiationManager"/>
+        <property name="viewResolvers">
+            <list>
+                <!-- 这里的配置我的理解是自动给后面action的方法return的字符串加上前缀和后缀，变成一个 可用的url地址 -->
+                <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+                    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+                    <property name="prefix" value="/WEB-INF/views/"/>
+                    <property name="suffix" value=".jsp"/>
+                </bean>
+            </list>
+        </property>
+        <property name="defaultViews">
+            <list>
+                <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
+                <!-- xml视图，XStreamMarshaller，可以转换任何形式的java对象，需要添加xStream jar包 -->
+                <!--<bean class="org.springframework.web.servlet.view.xml.MarshallingView">-->
+                <!--<property name="marshaller" ref="castorMarshaller"/>-->
+                <!--</bean>-->
+                <!--<bean class="com.alibaba.fastjson.support.spring.FastJsonJsonView">-->
+                <!--<property name="charset" value="UTF-8"/>-->
+                <!--</bean>-->
+
+                <bean id="xmlView" class="org.springframework.web.servlet.view.xml.MarshallingView">
+                    <property name="marshaller">
+                        <bean class="org.springframework.oxm.xstream.XStreamMarshaller"/>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 存储区域设置信息 -->
+    <!--<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />-->
+    <!-- 国际化资源文件 -->
+    <!--<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">-->
+    <!--<property name="defaultEncoding" value="UTF-8"/>-->
+    <!--<property name="basename" value="classpath:messages" />-->
+    <!--</bean>-->
+
+    <!--
+    <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+    页面使用标签 <spring:message code="internationalisation" />  ${pageContext.response.locale }-->
+
+    <mvc:interceptors>
+        <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+            <property name="paramName" value="lang" />
+        </bean>
+    </mvc:interceptors>
+    <!--<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">-->
+    <!--<property name="defaultEncoding" value="UTF-8"/>-->
+    <!--<property name="basenames">-->
+    <!--<list>-->
+    <!--<value>messages.welcome</value>-->
+    <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+    <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter"/>
+
+    <!-- 配置文件上传，如果没有使用文件上传可以不用配置，当然如果不配，那么配置文件中也不必引入上传组件包 -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <!-- 104857600 代表100MB -->
-        <property name="maxUploadSize" value="104857600" />
-        <property name="maxInMemorySize" value="40960" />
-        <property name="defaultEncoding" value="UTF-8"></property>
+        <!-- 默认编码 -->
+        <property name="defaultEncoding" value="utf-8"/>
+        <!-- 文件大小最大值 -->
+        <property name="maxUploadSize" value="10485760000"/>
+        <!-- 内存中的最大值 -->
+        <property name="maxInMemorySize" value="40960"/>
     </bean>
 
-    <!-- 配置视图解析器 如何把handler 方法返回值解析为实际的物理视图 -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/views/"></property>
-        <property name="suffix" value=".jsp"></property>
-    </bean>
+    <!-- 映射根目录，所访问的页面 -->
+    <!--<mvc:view-controller path="/" view-name="index"/>-->
 </beans>
