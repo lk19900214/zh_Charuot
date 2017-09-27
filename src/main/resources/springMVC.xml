@@ -9,7 +9,6 @@
     <context:annotation-config />
     <!-- 扫描识别包下包含的注解类 @Controller -->
     <context:component-scan base-package="com.zh.controller">
-
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
         <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>
     </context:component-scan>
@@ -27,7 +26,7 @@
             <!-- 转换字符串中文的 从请求和响应读取/编写字符串。默认情况下，它支持媒体类型 text/* 并使用文本/无格式内容类型编写。 -->
             <ref bean="stringHttpMessageConverter"/>
             <!-- 转换XML 使用 Spring 的 marshaller/un-marshaller 读取/编写 XML 数据。它转换媒体类型为 application/xml 的数据。-->
-            <ref bean="marshallingHttpMessageConverter"/>
+            <!--<ref bean="marshallingHttpMessageConverter"/>-->
             <!-- 转换json 使用 Jackson 的 ObjectMapper 读取/编写 JSON 数据。它转换媒体类型为 application/json 的数据。-->
             <ref bean="mappingJackson2HttpMessageConverter"/>
         </mvc:message-converters>
@@ -39,12 +38,12 @@
     </bean>
 
     <!--XML的转换需要使用Spring的 Marshaller 和 Unmarshaller.-->
-    <bean id="marshallingHttpMessageConverter" class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+   <!-- <bean id="marshallingHttpMessageConverter" class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
         <property name="marshaller" ref="xstreamMarshaller"/>
         <property name="unmarshaller" ref="xstreamMarshaller"/>
-        <!--<property name="marshaller" ref="castorMarshaller"/>-->
-        <!--<property name="unmarshaller" ref="castorMarshaller"/>-->
-    </bean>
+        <property name="marshaller" ref="castorMarshaller"/>
+        <property name="unmarshaller" ref="castorMarshaller"/>
+    </bean>-->
 
     <!-- JSON的转换. -->
     <bean id="mappingJackson2HttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -60,24 +59,24 @@
     </bean>
     <!--信息转换 - 结束-->
 
-    <bean id="xstreamMarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
-        <!--  启用annotation -->
+  <!--  <bean id="xstreamMarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
+        &lt;!&ndash;  启用annotation &ndash;&gt;
         <property name="autodetectAnnotations" value="true"/>
-        <!-- 类名别名 -->
+        &lt;!&ndash; 类名别名 &ndash;&gt;
         <property name="aliases">
             <map>
-                <!-- MenuDo这个类的别名就变成了menu，那么转换后的xml中就是menu -->
+                &lt;!&ndash; MenuDo这个类的别名就变成了menu，那么转换后的xml中就是menu &ndash;&gt;
                 <entry key="menu" value="com.zh.entity.UserDo"/>
             </map>
         </property>
-        <!-- 基本属性别名 -->
+        &lt;!&ndash; 基本属性别名 &ndash;&gt;
         <property name="fieldAliases">
             <map>
-                <!-- MenuDo中的typeName这个属性 -->
+                &lt;!&ndash; MenuDo中的typeName这个属性 &ndash;&gt;
                 <entry key="com.zh.entity.typeName" value="typeNameABC"/>
             </map>
         </property>
-    </bean>
+    </bean>-->
 
     <!--<bean id="xStreamMarshallingView" name="xStreamMarshallingView" class="org.springframework.web.servlet.view.xml.MarshallingView">-->
     <!--<property name="marshaller">-->

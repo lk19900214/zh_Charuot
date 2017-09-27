@@ -19,7 +19,7 @@ public class UserController {
     private UserService user;
     @RequestMapping("/register.do")
     public String insert(UserDo u, HttpServletResponse resp){
-        try {
+       /* try {
         PrintWriter out=resp.getWriter();
         int userp=user.insert(u);
         if(userp>0){
@@ -28,7 +28,7 @@ public class UserController {
         }
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
        return "";
     }
 }
