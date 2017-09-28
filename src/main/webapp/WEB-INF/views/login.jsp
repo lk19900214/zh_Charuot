@@ -3,41 +3,40 @@
 <html>
 <head>
     <title>空中网通行证</title>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <link type="text/css" rel="stylesheet"
-          href="../../css/base.css" />
-    <link type="text/css" rel="stylesheet"
-          href="../../css/register.css" />
-    <link rel="stylesheet"
-          href="../../css/css.css">
-    <script
-            src="../../js/detectmobilebrowser.js">
-
-    </script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <link type="text/css" rel="stylesheet" href="/css/base.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/register.css"/>
+    <link rel="stylesheet" href="/css/css.css"/>
+    <script src="/js/detectmobilebrowser.js"></script>
     <style type="text/css">
         /*二维码登录*/
         a.btnLogin {
             padding-left: 106px
         }
+
         .item_two {
             width: 253px;
             overflow: hidden;
             height: auto;
             margin: 0 auto;
         }
+
         .twocode {
             height: auto;
             width: 100%;
         }
+
         .twocode .t_title {
             text-align: center;
             color: #333;
             padding-top: 10px;
         }
+
         .twocode .t_title strong {
             color: #ff9900;
             margin-right: 6px;
         }
+
         .twocode .t_title a {
             display: inline-block;
             width: 37px;
@@ -48,10 +47,12 @@
             color: #333;
             margin-left: 9px;
         }
+
         .twocode .t_title a:hover {
             color: #3333;
             text-decoration: none
         }
+
         .twocode .ewk {
             width: 167px;
             height: 167px;
@@ -61,26 +62,28 @@
             margin-top: 10px;
             margin-bottom: 9px;
         }
+
         .twocode .ewk img {
             margin-top: 10px;
         }
+
     </style>
-    <!--[if lte IE 6]>
-    <script src="https://stc2.kongzhong.com/passport/v2/js/png.js" type="text/javascript"></script>
     <script type="text/javascript">
         DD_belatedPNG.fix('div,span,img,li,a,a.logo');
     </script>
+
+
     <![endif]-->
 </head>
 <body class="login_body">
 <div class="login-bg">
-    <div id="reg_main" class="reg_main" style='display: none;'>
+    <div id="reg_main" class="reg_main" style='display: block;'>
         <div class="reg_main_cont">
             <!--头部-->
             <div class="reg_main_header login_header">
                 <ul class="logotit">
                     <li><img src="https://stc2.kongzhong.com/passport/v2/img/login_logo.png"
-                             class="mr10 fleft mt20" />
+                             class="mr10 fleft mt20"/>
                     </li>
                 </ul>
             </div>
@@ -107,7 +110,7 @@
                                     <span class="icoPwd"></span> <label class="inputTip">请输入登录密码</label>
                                     <input type="password" class="input" autocomplete="off"
                                            oncontextmenu="return false" onpaste="return false"
-                                           maxlength="16" id="password_txt" />
+                                           maxlength="16" id="password_txt"/>
                                     <span class="icoClean"></span>
                                 </div>
                                 <div id="vcode_area" class="yzimgArea" style='display: none;'>
@@ -147,13 +150,7 @@
                             </p>
                         </div>
                         <div class="thirdparty-login scan-code">
-                            <div class="thirdparty-login-main">
-                                <span>第三方登录：</span> <a id="wb_connect_btn" data-cmd="tsina" class="bds_tsina"
-                                                       href="https://api.weibo.com/oauth2/authorize?client_id=1949226531&response_type=code&state=0f1ce9e2881d90f0&redirect_uri=https%3A%2F%2Fpassport.kongzhong.com%2Fwblogin" title="新浪微博登录"></a> <a data-cmd="sqq"
-                                                                                                                                                                                                                                                       class="bds_sqq" href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101413494&scope=get_user_info&state=0f1ce9e2881d90f0&redirect_uri=http%3A%2F%2Fpassport.kongzhong.com%2Fqqlogin" title="qq登录"></a> <a
-                                    data-cmd="weixin" class="bds_weixin" href="https://open.weixin.qq.com/connect/qrconnect?appid=wx5b7da7335edff3a2&response_type=code&scope=snsapi_login&state=0f1ce9e2881d90f0&redirect_uri=https%3A%2F%2Fpassport.kongzhong.com%2Fwxlogin"
-                                    title="微信登录"></a>
-                            </div>
+
                         </div>
                     </div>
                     <!--空中密令动态密码-->
@@ -164,7 +161,7 @@
                                 账号：<span>130****5400</span>
                             </div>
                             <div class="password">
-                                动态密码： <input class="" placeholder='请输入6位数字' /> <span
+                                动态密码： <input class="" placeholder='请输入6位数字'/> <span
                                     class="icoClean"></span>
                             </div>
                             <div class="errorTip">
@@ -187,13 +184,13 @@
         </div>
     </div>
 </div>
-<script src="../../js/jquery-3.2.1.min.js"></script>
-
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/login.js"></script>
 
 <div style="display:none">
     <script type="text/javascript">
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-        document.write(unescape("%3Cscript src='"+_bdhmProtocol+ "hm.baidu.com/h.js%3F1287c2225a527abe3386233dd9316f99' type='text/javascript'%3E%3C/script%3E"));
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1287c2225a527abe3386233dd9316f99' type='text/javascript'%3E%3C/script%3E"));
     </script>
 </div>
 </body>

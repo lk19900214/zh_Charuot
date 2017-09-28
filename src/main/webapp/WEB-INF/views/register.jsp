@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>用户注册</title>
-    <link type="text/css" rel="stylesheet" href="../../css/base.css"/>
-    <link type="text/css" rel="stylesheet" href="../../css/register.css"/>
-    <script src="../../js/detectmobilebrowser.js"></script>
+    <link type="text/css" rel="stylesheet" href="/css/base.css"/>
+    <link type="text/css" rel="stylesheet" href="/css/register.css"/>
+    <script src="/js/detectmobilebrowser.js"></script>
     <!--[if lte IE 6]>
-   <script src="js/png.js" type="text/javascript"></script>
+   <script src="/js/png.js" type="text/javascript"></script>
     <script type="text/javascript">
         DD_belatedPNG.fix('div,span,img,li,.tabs a,.tabs p');
     </script>
@@ -173,8 +173,8 @@
         </div>
     </div>
 </div>
-<script src="../../js/jquery-3.2.1.min.js?version=2017091401"></script>
-<script src="../../js/register.js"></script>
+<script src="/js/jquery-3.2.1.min.js?version=2017091401"></script>
+<script src="/js/register.js"></script>
 <script type="text/javascript">
 
 </script>

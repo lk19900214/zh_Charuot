@@ -8,14 +8,14 @@
     <meta name="description" content="军武游戏商城,空中网自营的军武游戏道具礼包销售商城，其中包括坦克世界、战舰世界等空中网旗下游戏产品">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="telephone=no">
-    <link href="../../css/com.css" rel="stylesheet" type="text/css">
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
-    <link href="../../css/jquery.e-calendar.css" rel="stylesheet" type="text/css">
-    <script src="../../js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="../../js/config.js" charset="UTF-8"></script>
-    <script type="text/javascript" src="../../js/updateNick.js"></script>
-    <script type="text/javascript" src="../../js/onlinemall.js"></script>
-    <script type="text/javascript" src="../../js/calendar.js"></script>
+    <link href="/css/com.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/jquery.e-calendar.css" rel="stylesheet" type="text/css">
+    <script src="/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/config.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/js/updateNick.js"></script>
+    <script type="text/javascript" src="/js/onlinemall.js"></script>
+    <script type="text/javascript" src="/js/calendar.js"></script>
     <script type="text/javascript">
         var ifLogInAndAct = 0;
         var userAccountss = '';
@@ -1254,7 +1254,7 @@
 
     });
 </script>
-<script type="text/javascript" src="../../js/style.js"></script>
-<script type="text/javascript" src="../../js/refer.js"></script>
+<script type="text/javascript" src="/js/style.js"></script>
+<script type="text/javascript" src="/js/refer.js"></script>
 <span style="display:none"><script src="https://s4.cnzz.com/z_stat.php?id=1256834993&web_id=1256834993" language="JavaScript"></script></span></body>
 </html>

@@ -1,13 +1,30 @@
 /**
  * Created by webrx on 2017-09-28.
  */
+
+    var b=false;
 function userNname() {
     var user=$('#useraccount').val();
     var yan=/^[a-zA-z]\w{3,15}$/;
     var div=$('#useraccountTip');
     if(yan.test(user)&&user!=""){
-        div.html("输入正确").css({color:"green"});
-        return true;
+            $.ajax({
+                type:'POST',
+                url:'../userlogin.do',
+                data:{uName:$('#useraccount').val()},
+                async:false,
+                dataType:'text',
+                success:function (d) {
+                    if(d==0){
+                        $('#useraccountTip').html("该用户已被注册").css({color:"red"});
+
+                    }else {
+                        $('#useraccountTip').html("该账号可以使用").css({color:"green"});
+                       b=true;
+                    }
+                }
+            });
+        return b;
     }else if(user==""){
         div.html("不能为空").css({color:"red"});
         return false;
@@ -78,13 +95,13 @@ function userMail() {
 }
 
 $('#submit_btn').click(function () {
-    if ((userNname() && userPassword() && userPassword1() && realName() && userMail())==true) {
+    if ((userNname() && userPassword() && userPassword1() && realName() && userMail()&&b)==true) {
         $('#register_frm').submit();
+    }else {
+        location.reload();
     }
 });
-
 function yan() {
-    alert("11")
     $.ajax({
         type:'GET',
         url:'/verify.do',
@@ -94,10 +111,10 @@ function yan() {
         success:function (d) {
             if(d=="输入正确") {
                 $('#vcodeTip').html(d).css({color:"green"});
+                b = true;
             }else {
                 $('#vcodeTip').html(d).css({color:"red"});
             }
         }
     });
-
 }
