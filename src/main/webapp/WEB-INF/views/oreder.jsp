@@ -1,18 +1,26 @@
-<%@page language="java" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<!-- saved from url=(0049)http://mall.kongzhong.com/product/detail?pid=3955 -->
+<!-- saved from url=(0050)http://mall.kongzhong.com/MemberController/myOrder -->
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城</title>
+    <title>我的订单-军武游戏商城</title>
     <meta name="keywords" content="军武游戏商城,军武游戏,空中网,战争三部曲商城,特惠商城,坦克世界,战舰世界,装甲风暴">
     <meta name="description" content="军武游戏商城,空中网自营的军武游戏道具礼包销售商城，其中包括坦克世界、战舰世界等空中网旗下游戏产品">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="telephone=no">
-    <link href="css/com.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../css/com.css" rel="stylesheet" type="text/css">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <script src="../../js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function directpayment(orderNo){
+            var userAccount = $("#userAccount").val();
+            window.location.href="/order/directpayment?orderNo=" +orderNo + "&userAccount="+userAccount;
+        }
+    </script>
 </head>
+
 <body>
 <!--[if lte IE 8]>
 <p class="chromeframe">时代在进步，您使用的IE浏览器版本过低 :-( 请<a href="http://windows.microsoft.com/" target="_blank">升级您的IE浏览器</a>，或使用<a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank">Chrome</a>、<a href="http://www.firefox.com.cn/download/" target="_blank">Firefox</a>等高级浏览器！</p>
@@ -21,8 +29,8 @@
 <div id="topInfo">
     <div class="maxW topshortcut">
         <!--<p></p>-->
-        <p>您好，欢迎来到军武游戏商城！请 <a href="javascript:void(0)">登录</a> / <a target="_blank" href="http://passport.kongzhong.com/acc">免费注册</a></p>
-        <p class="linkFloatRight"><a href="http://mall.kongzhong.com/MemberController/myOrder" target="_blank">我的订单</a><a href="http://mall.kongzhong.com/MemberController/queryMember" target="_blank">我的商城</a><a href="http://mall.kongzhong.com/helpController/helpCenter" target="_blank">帮助中心</a></p>
+        <p><p>欢迎光临军武游戏商城，<a class="user" href="http://mall.kongzhong.com/MemberController/queryMember" target="_blank">1****17317@qq.com</a><a class="logout" href="javascript:void(0)">退出</a></p></p>
+        <p class="linkFloatRight"><a href="./我的订单-军武游戏商城_files/我的订单-军武游戏商城.html" target="_blank">我的订单</a><a href="http://mall.kongzhong.com/MemberController/queryMember" target="_blank">我的商城</a><a href="http://mall.kongzhong.com/helpController/helpCenter" target="_blank">帮助中心</a></p>
     </div>
 </div>
 <!--页头 结束--> <link rel="shortcut icon" type="image/x-icon" href="http://mall.kongzhong.com/resources/static/images/wsg3232.ico">
@@ -31,7 +39,7 @@
     <div class="logo">
         <table border="0" cellspacing="0" cellpadding="0">
             <tbody><tr>
-                <td><a href="http://mall.kongzhong.com/"><img src="img/zhanche.png" width="142" height="70"></a></td>
+                <td><a href="http://mall.kongzhong.com/"><img src="../../img/zhanche.png" width="142" height="70"></a></td>
                 <td>|　军武游戏商城</td>
             </tr>
             </tbody></table>
@@ -47,7 +55,7 @@
             <a href="http://mall.kongzhong.com/product/list?catID=,20000,23000,23300,23302,&sort=up_desc" target="_blank" style=" color:#ACACAC;">战舰战备包</a>
         </p>
     </div>
-    <div class="shoppingCart"><i class="css-sp"></i><a href="http://mall.kongzhong.com/cart/to" target="_blank">我的购物车</a></div>
+    <div class="shoppingCart"><i class="css-sp"></i><a href="http://mall.kongzhong.com/cart/to" target="_blank">我的购物车</a><span>1</span></div>
 </div>
 <!--topNav 结束-->
 <!--主体 开头-->
@@ -184,146 +192,77 @@
             </div>
         </div>
     </div>
-    <!--菜单导航 结束-->  <!--导航路径菜单 开头-->
-    <div class="maxW menuPath">
-        <a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,">坦克世界</a><i>&gt;</i>
-        <a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,">坦克</a><i>&gt;</i>
-        <a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21106,">F系</a><i>&gt;</i>
-        <a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21106,21184,">反坦克火炮</a><i>&gt;</i>
-        【本周热荐】【新车首发】AMX 105 突击型
-    </div>
-    <!--导航路径菜单 结束-->
-
-    <!--商品详情 开始-->
-    <div class="productInfo">
+    <!--菜单导航 结束--> <!--订单中心 开头-->
+    <div class="userCenter order">
         <div class="maxW">
-            <dl class="product clearfloat">
-                <dd><img src="./【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城_files/20170919093634_16047.jpg" width="440" height="410" alt="59式中型坦克"></dd>
-                <dt>
-                    <div class="pName">
-                        <h1>【本周热荐】【新车首发】AMX 105 突击型</h1>
-                        <p>F系 八级 自行反坦克炮</p>
-                    </div>
-                    <div class="summary">
-                        <input type="hidden" id="catId" value=",20000,21000,21100,21106,21184,">
-                        <input type="hidden" id="pid" value="3955">
 
-
-
-
-
-
-                        <input type="hidden" value="0" id="showTimeType">
-
-                        <!---->
-                        <!---->
-
-                        <div class="countdown" style="display:none"><b></b><strong><span></span>天<span></span>小时<span></span>分<span></span>秒</strong></div>
-                        <div class="price">
-                            <!--<p>商品原价：<b>￥295.00（5900点券）</b></p>-->
-                            <p>商品现价：<span>￥218.00</span><i>（4360点券）</i></p>
-                        </div>
-                        <div class="promotion">
-                        </div>
-                    </div>
-                    <div class="chooseBtn">
-                        <div class="buyNum clearfloat">
-                            <p>购买数量：</p>
-                            <input type="hidden" value="99999" id="maxBuyNum">
-                            <p><a class="btnReduce" href="javascript:;">－</a><input name="" type="text" value="1"><a class="btnAdd" href="javascript:;">＋</a></p>
-                        </div>
-                        <div class="btns clearfloat">
-
-
-                            <a class="addBuy" pid="3955" href="javascript:void(0)">
-                                立即购买
-                            </a>
-                            <a class="addCart" pid="3955" href="javascript:void(0)"><span class="css-sp"></span>
-                                加入购物车
-                            </a>
-
-
-
-                            <!--
-
-                            <a class="addBuy " pid="3955" href="javascript:void(0)">
-
-                                     立即购买
-
-                             </a>
-
-
-
-                             <a class="addCart " pid="3955" href="javascript:void(0)"><span class="css-sp"></span>
-
-                                     加入购物车
-
-                             </a>
-                             -->
-
-
-
-
-                            <div class="share">
-                                分享至：
-                                <div id="shareId"><div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1505982758308">
-                                    <a title="分享到新浪微博" href="http://mall.kongzhong.com/product/detail?pid=3955#" class="bds_tsina" data-cmd="tsina"></a>
-                                    <a title="分享到QQ空间" href="http://mall.kongzhong.com/product/detail?pid=3955#" class="bds_qzone" data-cmd="qzone"></a>
-                                    <a title="分享到QQ好友" href="http://mall.kongzhong.com/product/detail?pid=3955#" class="popup_sqq" data-cmd="sqq"></a>
-                                    <a title="分享到微信" href="http://mall.kongzhong.com/product/detail?pid=3955#" class="bds_weixin" data-cmd="weixin"></a>
-                                </div><script src="js/share.js"></script></div>
-                            </div>
-                            <!--
-                         -->
-                            <!--
-                            -->
-
-                        </div>
-                    </div>
-                </dt>
-
-                <div class="ewcode">
-                    <img src="/showMobileProduct">
-                    <p>手机购买更便捷</p>
-                </div>
-
-            </dl>
-        </div>
-    </div>
-    <!--商品详情 结束-->
-
-    <!--商品其他相关 开始-->
-    <div class="productOther">
-        <div class="maxW fittingSuit"><!--商品套装、搭配 开始-->  <div class="maxW fittingSuit" style="display:none">    <div class="tabBtn"><a style="display:none" href="javascript:;" class="curr">优惠套餐</a></div>  <div class="tabContent combo_list" style="display:none">    <div class="packageBtn">    </div>       </div>     </div>    <!--商品套装、搭配 结束--></div>
-        <!--商品推荐、详情 开始-->
-        <div class="maxW proRecInfo clearfloat">
-            <div class="proHot left">
-                <h4><span class="css-sp"></span>推荐商品</h4><div class="proImg">    <a href="http://mall.kongzhong.com/product/detail?pid=586" target="_blank"><img src1="/resources/static/images/loading_kongzhong_white_s.gif" src="./【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城_files/20170309111739_77140.jpg" alt=""></a>    <p><a href="http://mall.kongzhong.com/product/detail?pid=586" target="_blank">【活动1】VK7201完全体礼包</a></p><b>点券价：<span>3360点券</span></b><b>网银价：<span>￥168</span></b></div><div class="proImg">    <a href="http://mall.kongzhong.com/product/detail?pid=557" target="_blank"><img src1="/resources/static/images/loading_kongzhong_white_s.gif" src="./【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城_files/20170309111948_85295.jpg" alt=""></a>    <p><a href="http://mall.kongzhong.com/product/detail?pid=557" target="_blank">【活动1】M60坦克完全体礼包</a></p><b>点券价：<span>3160点券</span></b><b>网银价：<span>￥158</span></b></div><div class="proImg">    <a href="http://mall.kongzhong.com/product/detail?pid=551" target="_blank"><img src1="/resources/static/images/loading_kongzhong_white_s.gif" src="./【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城_files/20170309112009_43747.jpg" alt=""></a>    <p><a href="http://mall.kongzhong.com/product/detail?pid=551" target="_blank">【活动1】121B完全体礼包</a></p><b>点券价：<span>3360点券</span></b><b>网银价：<span>￥168</span></b></div><div class="proImg">    <a href="http://mall.kongzhong.com/product/detail?pid=1928" target="_blank"><img src1="/resources/static/images/loading_kongzhong_white_s.gif" src="./【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城_files/20170228151652_79125.jpg" alt=""></a>    <p><a href="http://mall.kongzhong.com/product/detail?pid=1928" target="_blank">【标准】AMXM449标准礼包</a></p><b>点券价：<span>1760点券</span></b><b>网银价：<span>￥88</span></b></div><div class="proImg">    <a href="http://mall.kongzhong.com/product/detail?pid=1911" target="_blank"><img src1="/resources/static/images/loading_kongzhong_white_s.gif" src="./【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城_files/20170228153428_23491.jpg" alt=""></a>    <p><a href="http://mall.kongzhong.com/product/detail?pid=1911" target="_blank">【标准】M4190</a></p><b>点券价：<span>1760点券</span></b><b>网银价：<span>￥88</span></b></div>
-
+            <div class="leftbox">
+                <dl class="lnav">
+                    <dt>个人中心</dt>
+                    <dd>
+                        <a href="./我的订单-军武游戏商城_files/我的订单-军武游戏商城.html" class="curr">我的订单</a>
+                        <a href="http://mall.kongzhong.com/MemberController/accountSettings_coupons?state=0">我的优惠券</a>
+                    </dd>
+                    <dd class="online">
+                        <a href="http://mall.kongzhong.com/MemberController/queryMember">个人信息</a>
+                    </dd>
+                </dl>
             </div>
-            <div class="right">
-                <div class="tabBtn"><a class="curr" href="javascript:;">商品详情</a></div>
-                <div class="tabContent">
-                    <div class="proInfo">
-                        <style>#contentSpecial{ margin:-20px; background:#111;}
-                        #contentSpecial img{ max-width:974px; margin:0 auto;}
-                        #contentSpecial .specialTitle{ font-size:62px; font-weight:bold; color:#fff; padding:40px 60px 16px 60px; font-family:"微软雅黑";}
-                        #contentSpecial .specialTitle span{ display:inline-block; *display:inline; zoom:1; position:relative; font-size:24px; padding-left:42px; font-weight:normal; vertical-align:4px;}
-                        #contentSpecial .specialTitle span img{ position:absolute; width:19px; height:26px; left:12px; top:50%; margin-top:-13px;}
-                        #contentSpecial table{ max-width:none; margin:0 60px 50px 60px; width:852px;}
-                        #contentSpecial table td,#contentSpecial table th{ text-align:center; font-family:"微软雅黑"; line-height:1.5; padding:4px 0 6px 0;}
-                        #contentSpecial table th{ background:#3e3e32; font-weight:normal; font-size:18px; color:#ffffff; border:1px solid #111;}
-                        #contentSpecial table td{ font-size:14px; background:#2e2e2c; border-width:7px 1px 0 1px; border-style:solid; border-color:#111; color:#bbbbbb;}</style><div id="contentSpecial"><div class="specialTitle">AMX 105突击型<span>自行反坦克炮</span>
-                        &nbsp; &nbsp;</div><table width="" border="0" cellspacing="0" cellpadding="0"><tbody><tr><th>礼包内容</th><th>商品描述</th><th>人民币价值</th></tr><tr><td>AMX 105突击型*1</td><td>F系 Ⅷ级 自行反坦克炮</td><td>-元</td></tr><tr><td>车位*1</td><td>《坦克世界》车库位置</td><td>7.5</td></tr><tr><td>车组乘员*4</td><td>100%乘员熟练度</td><td>20元</td></tr></tbody></table><p></p><p></p></div>
-                    </div>
+
+            <div class="right rightbox">
+                <div class="orderSearch"><input name="" type="text" value="输入商品名称或订单编号进行查询"><a href="javascript:;">订单查询</a></div>
+                <div class="myOrderTab"><a href="./我的订单-军武游戏商城_files/我的订单-军武游戏商城.html" class="curr">全部订单</a>|<a href="http://mall.kongzhong.com/MemberController/myOrder?state=1">购买成功</a>|<a href="http://mall.kongzhong.com/MemberController/myOrder?state=0">未支付</a>|<a href="http://mall.kongzhong.com/MemberController/myOrder?state=2">已取消</a></div>
+                <div class="myOrderList">
+                    <table>
+                        <colgroup><col class="col1"><col class="col2"><col class="col3"><col class="col4"></colgroup>
+                        <thead>
+                        <tr>
+                            <th><div class="proN">商品名称</div><div class="proP">单价(元/点券)</div><div class="proC">数量</div></th>
+                            <th>实际支付金额</th>
+                            <th>交易状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <input id="userAccount" value="1493617317@qq.com" type="hidden">
+                        <tr>
+                            <td class="thB" colspan="4"></td>
+                        </tr>
+                        <tr class="trBg">
+                            <td colspan="4">下单时间：2017-09-20 16:41:20　　<span>订单号：111004358762</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="proN">
+                                    <div class="proImg">
+                                        <a href="http://mall.kongzhong.com/product/detail?pid=3955" target="_blank"><img src="./我的订单-军武游戏商城_files/20170919093635_00673.jpg" alt=""></a>
+                                        <p><a href="http://mall.kongzhong.com/product/detail?pid=3955" target="_blank">【本周热荐】【新车首发】AMX 105 突击型</a></p>
+                                    </div>
+                                </div><div class="proP"><span class="sF">￥218.00<br>4360点券</span></div><div class="proC"><span class="sF">1</span></div>
+                            </td>
+                            <td rowspan="1"><span class="sF">￥218.00<br>4360点券</span></td>
+                            <td rowspan="1">
+						        	<span class="sF">
+						        		已取消
+						        	</span>
+                            </td>
+                            <td rowspan="1">
+                                <div class="orderA">
+                                    <a class="gP" href="http://mall.kongzhong.com/cart/replybuy?orderNo=111004358762">再次购买</a>
+                                    <a href="http://mall.kongzhong.com/MemberController/orderDetails?orderNo=111004358762">查看详情</a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page pageC">
+                    <span class="prev pDisabled"><b></b>上一页</span><a class="curr" href="javascript:void(0);">1</a><span class="next nDisabled">下一页<b></b></span><span class="skip">共<em>1</em>页&nbsp;&nbsp;</span>
                 </div>
             </div>
         </div>
-        <!--商品推荐、详情 结束-->
     </div>
-    <!--商品其他相关 结束-->
-
-
+    <!--订单中心 结束-->
 </div>
 <!--主体 结束-->
 <!--页脚 开头-->
@@ -360,14 +299,15 @@
             </dl>
         </div>
         <div class="copyright clearfloat">
-            <a href="http://mall.kongzhong.com/product/detail?pid=3955#" target="_blank"><img src="img/zhan.png" width="117" height="50"></a>
-            <a href="http://mall.kongzhong.com/product/detail?pid=3955#" target="_blank"><img src="img/wargaming.png" width="105" height="50"></a>
-            <p><a href="http://www.miibeian.gov.cn/" target="_blank">豫ICP证020001号</a>　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10052.html" target="_blank">经营许可证编号:B2-20090197</a>　|　豫公网安备1101080214622　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10050.html" target="_blank">互联网出版许可证新出网证(京)字046号</a><br>网络文化经营许可证 豫网文[2011]0467-160号　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10046.html" target="_blank">广播电视节目制作经营许可证(京)字第880号</a> 　|　<a href="http://www.kongzhong.com/licence/2012-09-18/10219.html" target="_blank">信息网络传播视听节目许可证0109379号</a></p>
+            <a href="http://mall.kongzhong.com/MemberController/myOrder#" target="_blank"><img src="../../img/zhan.png" width="117" height="50"></a>
+            <a href="http://mall.kongzhong.com/MemberController/myOrder#" target="_blank"><img src="../../img/wargaming.png" width="105" height="50"></a>
+            <p><a href="http://www.miibeian.gov.cn/" target="_blank">豫ICP证020001号</a>　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10052.html" target="_blank">经营许可证编号:B2-20090197</a>　|　豫公网安备1101080214622　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10050.html" target="_blank">互联网出版许可证新出网证(豫)字046号</a><br>网络文化经营许可证 豫网文[2011]0467-160号　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10046.html" target="_blank">广播电视节目制作经营许可证(京)字第880号</a> 　|　<a href="http://www.kongzhong.com/licence/2012-09-18/10219.html" target="_blank">信息网络传播视听节目许可证0109379号</a></p>
         </div>
     </div>
 </div>
-<!--页脚 结束--><script type="text/javascript" src="js/refer.js"></script>
-<script type="text/javascript" src="js/sea.js"></script>
+<!--页脚 结束--><script type="text/javascript" src="../../js/style.js"></script>
+<script type="text/javascript" src="../../js/refer.js"></script>
+<script type="text/javascript" src="../../js/sea-debug.js"></script>
 <script type="text/javascript">
     seajs.config({
         base:'/resources/static/js/',
@@ -377,10 +317,11 @@
             'template':  'libs/artTemplate/template-min.js'
         }
     });
-    seajs.use('modules/product/product_detail', function(app) {
-
+    seajs.use('modules/member/myOrder', function(app) {
     });
 </script>
-<span style="display:none"><script src="./【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城_files/z_stat.php" language="JavaScript"></script><script src="./【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1256834993" target="_blank" title="站长统计">站长统计</a></span>
+<span style="display:none"><script src="./我的订单-军武游戏商城_files/z_stat.php" language="JavaScript"></script><script src="./我的订单-军武游戏商城_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1256834993" target="_blank" title="站长统计">站长统计</a></span>
+
+
 </body>
 </html>

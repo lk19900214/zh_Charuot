@@ -10,10 +10,10 @@
     <meta name="description" content="军武游戏商城,空中网自营的军武游戏道具礼包销售商城，其中包括坦克世界、战舰世界等空中网旗下游戏产品">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="telephone=no">
-    <link href="css/com.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/config.js" charset="UTF-8"></script>
+    <link href="../../css/com.css" rel="stylesheet" type="text/css">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/config.js" charset="UTF-8"></script>
 
 </head>
 
@@ -37,7 +37,7 @@
         <div class="logo">
             <table border="0" cellspacing="0" cellpadding="0">
                 <tbody><tr>
-                    <td><a href="http://mall.kongzhong.com/" target="_blank"><img src="img/zhanche.png" width="142" height="70"></a></td>
+                    <td><a href="http://mall.kongzhong.com/" target="_blank"><img src="../../img/zhanche.png" width="142" height="70"></a></td>
                     <td>|　购物车</td>
                 </tr>
                 </tbody></table>
@@ -184,18 +184,18 @@
             </dl>
         </div>
         <div class="copyright clearfloat">
-            <a href="http://mall.kongzhong.com/cart/to#" target="_blank"><img src="img/zhan.png" width="117" height="50"></a>
-            <a href="http://mall.kongzhong.com/cart/to#" target="_blank"><img src="img/wargaming.png" width="105" height="50"></a>
+            <a href="http://mall.kongzhong.com/cart/to#" target="_blank"><img src="../../img/zhan.png" width="117" height="50"></a>
+            <a href="http://mall.kongzhong.com/cart/to#" target="_blank"><img src="../../img/wargaming.png" width="105" height="50"></a>
             <p><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP证020001号</a>　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10052.html" target="_blank">经营许可证编号:B2-20090197</a>　|　京公网安备1101080214622　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10050.html" target="_blank">互联网出版许可证新出网证(京)字046号</a><br>网络文化经营许可证 京网文[2011]0467-160号　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10046.html" target="_blank">广播电视节目制作经营许可证(京)字第880号</a> 　|　<a href="http://www.kongzhong.com/licence/2012-09-18/10219.html" target="_blank">信息网络传播视听节目许可证0109379号</a></p>
         </div>
     </div>
 </div>
-<!--页脚 结束--><script type="text/javascript" src="js/style.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/cart.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/common.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/refer.js"></script>
+<!--页脚 结束--><script type="text/javascript" src="../../js/style.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../../js/cart.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../../js/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../../js/refer.js"></script>
 
-<script type="text/javascript" src="js/sea-debug.js"></script>
+<script type="text/javascript" src="../../js/sea-debug.js"></script>
 <script type="text/javascript">
     seajs.config({
         base:'/resources/static/js/',

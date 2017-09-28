@@ -13,9 +13,9 @@
     <meta name="format-detection" content="telephone=no">
 
     <link rel="shortcut icon" type="image/x-icon" href="http://mall.kongzhong.com/resources/static/images/wsg3232.ico">
-    <link href="css/com.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <link href="../../css/com.css" rel="stylesheet" type="text/css">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
         <div class="logo">
             <table border="0" cellspacing="0" cellpadding="0">
                 <tbody><tr>
-                    <td><a href="http://mall.kongzhong.com/" target="_blank"><img src="img/zhanche.png" width="142" height="70"></a></td>
+                    <td><a href="http://mall.kongzhong.com/" target="_blank"><img src="../../img/zhanche.png" width="142" height="70"></a></td>
                     <td>|　结算页</td>
                 </tr>
                 </tbody></table>
@@ -268,16 +268,16 @@
             </dl>
         </div>
         <div class="copyright clearfloat">
-            <a href="http://mall.kongzhong.com/cart/toSettle?code=c4989#" target="_blank"><img src="img/zhan.png" width="117" height="50"></a>
-            <a href="http://mall.kongzhong.com/cart/toSettle?code=c4989#" target="_blank"><img src="img/wargaming.png" width="105" height="50"></a>
+            <a href="http://mall.kongzhong.com/cart/toSettle?code=c4989#" target="_blank"><img src="../../img/zhan.png" width="117" height="50"></a>
+            <a href="http://mall.kongzhong.com/cart/toSettle?code=c4989#" target="_blank"><img src="../../img/wargaming.png" width="105" height="50"></a>
             <p><a href="http://www.miibeian.gov.cn/" target="_blank">豫ICP证020001号</a>　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10052.html" target="_blank">经营许可证编号:B2-20090197</a>　|　豫公网安备1101080214622　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10050.html" target="_blank">互联网出版许可证新出网证(豫)字046号</a><br>网络文化经营许可证 豫网文[2011]0467-160号　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10046.html" target="_blank">广播电视节目制作经营许可证(京)字第880号</a> 　|　<a href="http://www.kongzhong.com/licence/2012-09-18/10219.html" target="_blank">信息网络传播视听节目许可证0109379号</a></p>
         </div>
     </div>
 </div>
-<!--页脚 结束--><script type="text/javascript" src="js/settle.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/common.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/config.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/sea-debug.js"></script>
+<!--页脚 结束--><script type="text/javascript" src="../../js/settle.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../../js/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../../js/config.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../../js/sea-debug.js"></script>
 <script type="text/javascript">
     seajs.config({
         base:'/resources/static/js/',

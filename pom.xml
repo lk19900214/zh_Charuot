@@ -296,6 +296,7 @@
                         <java.util.logging.SimpleFormatter.format>[%4$s] %1$tF %1$tT %3$s %5$s %n</java.util.logging.SimpleFormatter.format>
                     </systemProperties>
                 </configuration>
+                <!--插件编译完执行-->
                 <executions>
                     <execution>
                         <id>tomcat-run</id>

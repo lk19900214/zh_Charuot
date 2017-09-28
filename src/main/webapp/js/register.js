@@ -88,11 +88,10 @@ function yan() {
     $.ajax({
         type:'GET',
         url:'/verify.do',
-        data:{code:vcode},
+        data:{vcode:$('#vcode').val()},
         async:false,
         dataType:'text',
         success:function (d) {
-           alert(d)
             if(d=="输入正确") {
                 $('#vcodeTip').html(d).css({color:"green"});
             }else {

@@ -45,31 +45,31 @@ public class UserDo {
     /**
      * 状态 1:可用状态  0:删除状态  2:锁定状态
      */
-    @Column(name = "STATE")
+    @Transient
     private Byte state;
 
     /**
      * 创建人ID
      */
-    @Column(name = "CREATE_ID")
+    @Transient
     private Long createId;
 
     /**
      * 创建时间
      */
-    @Column(name = "CREATE_DATE")
+    @Transient
     private Date createDate;
 
     /**
      * 修改人ID
      */
-    @Column(name = "UPDATE_ID")
+    @Transient
     private Long updateId;
 
     /**
      * 修改时间
      */
-    @Column(name = "UPDATE_DATE")
+    @Transient
     private Date updateDate;
 
     /**

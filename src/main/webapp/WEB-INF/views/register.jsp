@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title>用户注册</title>
-    <link type="text/css" rel="stylesheet" href="css/base.css"/>
-    <link type="text/css" rel="stylesheet" href="css/register.css"/>
-    <script src="js/detectmobilebrowser.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../css/base.css"/>
+    <link type="text/css" rel="stylesheet" href="../../css/register.css"/>
+    <script src="../../js/detectmobilebrowser.js"></script>
     <!--[if lte IE 6]>
    <script src="js/png.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -70,7 +70,7 @@
                         <div class="l_list wone_zc1">用户名：</div>
                         <div class="r_list wtwo_zc1">
                             <div class="input_text">
-                                <input id="useraccount" name="userName" type="input" maxlength="11" class="dis-ime-mode" onblur="userNname()">
+                                <input id="useraccount" name="uName" type="input" maxlength="11" class="dis-ime-mode" onblur="userNname()">
                             </div>
                             <div id="useraccountTip"></div>
                         </div>
@@ -78,7 +78,7 @@
                     <div class="t_line">
                         <div class="l_list wone_zc1">设置密码：</div>
                         <div class="r_list wtwo_zc1 init_lineheight">
-                            <div class="input_text"><input id="password" name="password"  maxlength="16" type="password" class="password_adv" onblur="userPassword()" ></div>
+                            <div class="input_text"><input id="password" name="uPassword"  maxlength="16" type="password" class="password_adv" onblur="userPassword()" ></div>
                         <div id="passwordTip"></div>
                         </div>
                     </div>
@@ -107,14 +107,14 @@
                         <div class="t_line">
                             <div class="l_list wone_zc1">真实姓名：</div>
                             <div class="r_list wtwo_zc1">
-                                <div class="input_text"><input id="realname" type="text" maxlength="50" name="realname" onblur="realName()"></div>
+                                <div class="input_text"><input id="realname" type="text" maxlength="50" name="uRealname" onblur="realName()"></div>
                                 <div id="realnameTip"></div>
                             </div>
                         </div>
                         <div class="t_line">
                             <div class="l_list wone_zc1">邮箱号：</div>
                             <div class="r_list wtwo_zc1">
-                                <div class="input_text"><input id="mail" type="text" maxlength="18" name="mail" onblur="userMail()"></div>
+                                <div class="input_text"><input id="mail" type="text" maxlength="18" name="uMail" onblur="userMail()"></div>
                                 <div id="mailTip"></div>
                             </div>
                         </div>
@@ -173,8 +173,8 @@
         </div>
     </div>
 </div>
-<script src="js/jquery-3.2.1.min.js?version=2017091401"></script>
-<script src="js/register.js"></script>
+<script src="../../js/jquery-3.2.1.min.js?version=2017091401"></script>
+<script src="../../js/register.js"></script>
 <script type="text/javascript">
 
 </script>
