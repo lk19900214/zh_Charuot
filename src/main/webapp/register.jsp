@@ -93,9 +93,10 @@
                     <div class="t_line">
                         <div class="l_list wone_zc1">验证码：</div>
                         <div class="r_list wtwo_zc1" style="position:relative;">
-                            <div class="input_text"><input id="vcode" name="vcode" type="text" class="dis-ime-mode" maxlength="4" style="width: 100px"></div>
-                             <img src=""  class="txtCenter getVali">
-                            <%--<input type="button" id="sms_code_btn" value="获取验证码" class="txtCenter getVali">--%>
+                            <div class="input_text">
+                                <input id="vcode" name="vcode" type="text" class="dis-ime-mode" maxlength="4" style="width: 100px" onblur="yan()">
+                            </div>
+                             <img src="/checkm.do"  class="txtCenter getVali" title="看不清换一张" onclick="this.src='/checkm.do?'+new Date()">
                             <div id="vcodeTip"></div>
                         </div>
                     </div>
@@ -120,7 +121,7 @@
                     </div>
                     <div class="t_line">
                         <div class="l_list wone_zc1">&nbsp;</div>
-                        <div class="r_list wtwo_zc2"><a href="javaScript:void(0)" id="submit_btn" class="btn_10" onclick="quan()"><span>提交注册</span></a></div>
+                        <div class="r_list wtwo_zc2"><a href="javaScript:void(0)" id="submit_btn" class="btn_10" ><span>提交注册</span></a></div>
                     </div>
                     <div class="t_line">
                         <div class="l_list wone_zc1">&nbsp;</div>

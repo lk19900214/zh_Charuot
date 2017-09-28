@@ -77,9 +77,28 @@ function userMail() {
 
 }
 
-function quan() {
-    if ((userNname()&&userPassword()&&userPassword1()&&realName()&&userMail())!=true){
-        location.href="#";
+$('#submit_btn').click(function () {
+    if ((userNname() && userPassword() && userPassword1() && realName() && userMail())==true) {
+        $('#register_frm').submit();
     }
+});
+
+function yan() {
+    alert("11")
+    $.ajax({
+        type:'GET',
+        url:'/verify.do',
+        data:{code:vcode},
+        async:false,
+        dataType:'text',
+        success:function (d) {
+           alert(d)
+            if(d=="输入正确") {
+                $('#vcodeTip').html(d).css({color:"green"});
+            }else {
+                $('#vcodeTip').html(d).css({color:"red"});
+            }
+        }
+    });
 
 }
