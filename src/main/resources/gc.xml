@@ -26,8 +26,8 @@
 
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER"/>
         <!--根据表生成想要的方法-->
-        <table tableName="ZH_USERNAME" domainObjectName="UserDo">
-            <generatedKey column="USER_ID" sqlStatement="Mysql" identity="true"/>
+        <table tableName="zh_UserName" domainObjectName="UserDo">
+            <generatedKey column="user_Id" sqlStatement="Mysql" identity="true"/>
         </table>
 
     </context>
