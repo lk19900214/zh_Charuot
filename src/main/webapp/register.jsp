@@ -63,7 +63,7 @@
         </div>
         <!--右侧-->
 
-        <form id="register_frm" method="post" action="/acc">
+        <form id="register_frm" method="post" action="/insert.do">
             <div class="rightMain">
                 <div class="right_wrapper">
                     <div class="t_line">

@@ -2,8 +2,10 @@ package com.zh.controller;
 
 import com.zh.entity.UserDo;
 import com.zh.service.UserService;
+import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -16,23 +18,26 @@ import java.io.PrintWriter;
 /**
  * Created by webrx on 2017-09-20.
  */
+@Log4j
 @Controller
 public class UserController {
     @Autowired
     private UserService user;
-    @RequestMapping("/register.do")
+    @RequestMapping("/insert.do") @PostMapping
     public String insert(UserDo u, HttpServletResponse resp) {
-       /* try {
+       try {
         PrintWriter out=resp.getWriter();
         int userp=user.insert(u);
         if(userp>0){
             out.print("注册成功");
             return "login";
+        }else {
+            return "register";
         }
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
-        return "";
+        }
+       return "";
     }
     @RequestMapping("/verify.do")
     @ResponseBody
