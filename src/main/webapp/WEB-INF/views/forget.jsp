@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>空中网用户中心 - 密码找回</title>
-    <link type="text/css" rel="stylesheet" href="./空中网用户中心 - 密码找回_files/register.css">
-    <link type="text/css" rel="stylesheet" href="./空中网用户中心 - 密码找回_files/base.css">
-    <script src="./空中网用户中心 - 密码找回_files/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="/css/register.css">
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <script src="/js/jquery.js"></script>
     <script type="text/javascript">
         DD_belatedPNG.fix('div,span,img,li,a,p');
     </script>

@@ -1,8 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <!-- saved from url=(0050)http://mall.kongzhong.com/cart/toSettle?code=c4989 -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>结算页-军武游戏商城</title>
     <meta name="keywords" content="军武游戏商城,军武游戏,空中网,战争三部曲商城,特惠商城,坦克世界,战舰世界,装甲风暴">
     <meta name="description" content="军武游戏商城,空中网自营的军武游戏道具礼包销售商城，其中包括坦克世界、战舰世界等空中网旗下游戏产品">
@@ -13,9 +14,9 @@
     <meta name="format-detection" content="telephone=no">
 
     <link rel="shortcut icon" type="image/x-icon" href="http://mall.kongzhong.com/resources/static/images/wsg3232.ico">
-    <link href="../../css/com.css" rel="stylesheet" type="text/css">
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <link href="/css/com.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -26,8 +27,11 @@
 <div id="topInfo">
     <div class="maxW topshortcut">
         <!--<p></p>-->
-        <p><p>欢迎光临军武游戏商城，<a class="user" href="http://mall.kongzhong.com/MemberController/queryMember" target="_blank">1****17317@qq.com</a><a class="logout" href="javascript:void(0)">退出</a></p></p>
-        <p class="linkFloatRight"><a href="http://mall.kongzhong.com/MemberController/myOrder" target="_blank">我的订单</a><a href="http://mall.kongzhong.com/MemberController/queryMember" target="_blank">我的商城</a><a href="http://mall.kongzhong.com/helpController/helpCenter" target="_blank">帮助中心</a></p>
+        <input type="hidden" value="${userLogin.uName}" id="pan">
+        <p id="nouser">您好，欢迎来到军武游戏商城！请 <a href="javascript:void(0)" id="userlogin">登录</a> / <a target="_blank" href="/login.do">免费注册</a></p>
+        <p id="onuser" style="display: none">您好，欢迎<a href="javascript:void(0)" id="userlogin1">${userLogin.uName}</a>来到军武游戏商城！<a href="/tuichu.do">退出</a></p>
+        <p class="linkFloatRight" id="nol"><a href="/order.do" target="_blank">我的订单</a><a href="/nom.do" target="_blank">我的商城</a><a href="/help.do" target="_blank">帮助中心</a></p>
+        <p class="linkFloatRight" id="onl"><a href="/order.do" target="_blank">我的订单</a><a href="/nom.do" target="_blank">我的商城</a><a href="/help.do" target="_blank">帮助中心</a></p>
     </div>
 </div>
 <!--页头 结束-->
@@ -37,11 +41,13 @@
     <div class="maxW topNav">
         <div class="logo">
             <table border="0" cellspacing="0" cellpadding="0">
-                <tbody><tr>
+                <tbody>
+                <tr>
                     <td><a href="http://mall.kongzhong.com/" target="_blank"><img src="../../img/zhanche.png" width="142" height="70"></a></td>
                     <td>|　结算页</td>
                 </tr>
-                </tbody></table>
+                </tbody>
+            </table>
         </div>
         <ul class="step clearfloat">
             <li class="on"><span>1</span><em>我的购物车</em><b></b><i></i></li>
@@ -60,10 +66,18 @@
             <div class="checkList">
                 <div class="stepCheck">
                     <h4><b></b>账号信息</h4>
-                    <dl><dd>用户账号：</dd><dt>1493617317@qq.com</dt></dl>
-                    <dl><dd>大区：</dd><dt><select id="area" name="area"><option value="0">-请选择-</option><option value="2">电信南方区</option><option value="1">联通北方区</option></select></dt></dl>
-
-
+                    <dl>
+                        <dd>用户账号：</dd>
+                        <dt>1493617317@qq.com</dt>
+                    </dl>
+                    <dl>
+                        <dd>大区：</dd>
+                        <dt><select id="area" name="area">
+                            <option value="0">-请选择-</option>
+                            <option value="2">电信南方区</option>
+                            <option value="1">联通北方区</option>
+                        </select></dt>
+                    </dl>
 
 
                 </div>
@@ -144,12 +158,15 @@
 
                 <div class="payOther">
                     <div class="coupon">
-                        <a class="checkA" href="javascript:;"><div class="checkBtn"><input onclick="calCouponPrice();" id="checkUseCoupon" type="checkbox" value="1"><span></span></div>使用优惠券</a>
+                        <a class="checkA" href="javascript:;">
+                            <div class="checkBtn"><input onclick="calCouponPrice();" id="checkUseCoupon" type="checkbox" value="1"><span></span></div>
+                            使用优惠券</a>
                         <div class="tabC"><a class="curr" href="javascript:;">可用优惠券<span>(0)</span></a><a href="javascript:;">不可用优惠券<span>(0)</span></a></div>
                         <div class="tabCL">
                             <div class="tableD">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                    <tbody><tr>
+                                    <tbody>
+                                    <tr>
                                         <th>选择</th>
                                         <th>使用条件</th>
                                         <th>商品范围</th>
@@ -157,12 +174,14 @@
                                         <th>平台限制</th>
                                     </tr>
 
-                                    </tbody></table>
+                                    </tbody>
+                                </table>
                             </div>
 
                             <div class="tableD" style="display:none;">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                    <tbody><tr>
+                                    <tbody>
+                                    <tr>
                                         <th>选择</th>
                                         <th>使用条件</th>
                                         <th>商品范围</th>
@@ -171,14 +190,17 @@
                                     </tr>
 
 
-                                    </tbody></table>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                     <!-- class="coupon" 结束-->
 
                     <div class="integral">
-                        <a class="checkA" href="javascript:;"><div class="checkBtn"><input onclick="calIntegral();" id="checkUseIntegral" type="checkbox" value="1"><span></span></div>使用商城积分</a>
+                        <a class="checkA" href="javascript:;">
+                            <div class="checkBtn"><input onclick="calIntegral();" id="checkUseIntegral" type="checkbox" value="1"><span></span></div>
+                            使用商城积分</a>
                         <div class="integralB">
                             <p>使用商城积分<input onblur="calIntegral();" id="useIntegral" type="text" value="0" class="num">，抵扣<span>￥0</span>元</p>
                             <div class="hr"></div>
@@ -270,27 +292,35 @@
         <div class="copyright clearfloat">
             <a href="http://mall.kongzhong.com/cart/toSettle?code=c4989#" target="_blank"><img src="../../img/zhan.png" width="117" height="50"></a>
             <a href="http://mall.kongzhong.com/cart/toSettle?code=c4989#" target="_blank"><img src="../../img/wargaming.png" width="105" height="50"></a>
-            <p><a href="http://www.miibeian.gov.cn/" target="_blank">豫ICP证020001号</a>　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10052.html" target="_blank">经营许可证编号:B2-20090197</a>　|　豫公网安备1101080214622　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10050.html" target="_blank">互联网出版许可证新出网证(豫)字046号</a><br>网络文化经营许可证 豫网文[2011]0467-160号　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10046.html" target="_blank">广播电视节目制作经营许可证(京)字第880号</a> 　|　<a href="http://www.kongzhong.com/licence/2012-09-18/10219.html" target="_blank">信息网络传播视听节目许可证0109379号</a></p>
+            <p><a href="http://www.miibeian.gov.cn/" target="_blank">豫ICP证020001号</a>　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10052.html" target="_blank">经营许可证编号:B2-20090197</a>　|　豫公网安备1101080214622　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10050.html" target="_blank">互联网出版许可证新出网证(豫)字046号</a><br>网络文化经营许可证
+                豫网文[2011]0467-160号　|　<a href="http://www.kongzhong.com/licence/2012-05-14/10046.html" target="_blank">广播电视节目制作经营许可证(京)字第880号</a> 　|　<a href="http://www.kongzhong.com/licence/2012-09-18/10219.html" target="_blank">信息网络传播视听节目许可证0109379号</a></p>
         </div>
     </div>
 </div>
-<!--页脚 结束--><script type="text/javascript" src="../../js/settle.js" charset="UTF-8"></script>
-<script type="text/javascript" src="../../js/common.js" charset="UTF-8"></script>
-<script type="text/javascript" src="../../js/config.js" charset="UTF-8"></script>
-<script type="text/javascript" src="../../js/sea-debug.js"></script>
+<!--页脚 结束-->
+<script type="text/javascript" src="/js/settle.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/config.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/sea-debug.js"></script>
+<script src="/js/index.js"></script>
 <script type="text/javascript">
     seajs.config({
-        base:'/resources/static/js/',
+        base: '/resources/static/js/',
         // 配置别名
         alias: {
-            'jquery':  'libs/jquery/1.10.1/jquery.js',
-            'template':  'libs/artTemplate/template-min.js'
+            'jquery': 'libs/jquery/1.10.1/jquery.js',
+            'template': 'libs/artTemplate/template-min.js'
         }
     });
-    seajs.use('modules/top', function(app) {
+    seajs.use('modules/top', function (app) {
 
     });
 </script>
 
-<span style="display:none"><script src="./结算页-军武游戏商城_files/z_stat.php" language="JavaScript"></script><script src="./结算页-军武游戏商城_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1256834993" target="_blank" title="站长统计">站长统计</a></span>
-</body></html>
+<span style="display:none">
+    <script src="#"></script>
+    <script src="#" charset="utf-8" type="text/javascript"></script>
+    <a href="#" target="_blank" title="站长统计">站长统计</a>
+</span>
+</body>
+</html>

@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<!-- saved from url=(0033)http://mall.kongzhong.com/cart/to -->
 <html>
 <head>
     <meta http-equiv="Content-Type">
@@ -10,10 +9,10 @@
     <meta name="description" content="军武游戏商城,空中网自营的军武游戏道具礼包销售商城，其中包括坦克世界、战舰世界等空中网旗下游戏产品">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="telephone=no">
-    <link href="../../css/com.css" rel="stylesheet" type="text/css">
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../../js/config.js" charset="UTF-8"></script>
+    <link href="/css/com.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/config.js" charset="UTF-8"></script>
 
 </head>
 
@@ -25,8 +24,11 @@
 <div id="topInfo">
     <div class="maxW topshortcut">
         <!--<p></p>-->
-        <p><p>欢迎光临军武游戏商城，<a class="user" href="http://mall.kongzhong.com/MemberController/queryMember" target="_blank">1****17317@qq.com</a><a class="logout" href="javascript:void(0)">退出</a></p></p>
-        <p class="linkFloatRight"><a href="http://mall.kongzhong.com/MemberController/myOrder" target="_blank">我的订单</a><a href="http://mall.kongzhong.com/MemberController/queryMember" target="_blank">我的商城</a><a href="http://mall.kongzhong.com/helpController/helpCenter" target="_blank">帮助中心</a></p>
+        <input type="hidden" value="${userLogin.uName}" id="pan">
+        <p id="nouser" >您好，欢迎来到军武游戏商城！请 <a href="javascript:void(0)" id="userlogin">登录</a> / <a target="_blank" href="/login.do">免费注册</a></p>
+        <p id="onuser" style="display: none">您好，欢迎<a href="javascript:void(0)" id="userlogin1" >${userLogin.uName}</a>来到军武游戏商城！<a href="/tuichu.do">退出</a></p>
+        <p class="linkFloatRight" id="nol"><a href="/order.do" target="_blank">我的订单</a><a href="/nom.do" target="_blank">我的商城</a><a href="/help.do" target="_blank">帮助中心</a></p>
+        <p class="linkFloatRight"  id="onl"><a href="/order.do" target="_blank">我的订单</a><a href="/nom.do" target="_blank">我的商城</a><a href="/help.do" target="_blank">帮助中心</a></p>
     </div>
 </div>
 <!--页头 结束-->
@@ -190,12 +192,12 @@
         </div>
     </div>
 </div>
-<!--页脚 结束--><script type="text/javascript" src="../../js/style.js" charset="UTF-8"></script>
-<script type="text/javascript" src="../../js/cart.js" charset="UTF-8"></script>
-<script type="text/javascript" src="../../js/common.js" charset="UTF-8"></script>
-<script type="text/javascript" src="../../js/refer.js"></script>
-
-<script type="text/javascript" src="../../js/sea-debug.js"></script>
+<!--页脚 结束--><script type="text/javascript" src="/js/style.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/cart.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/refer.js"></script>
+<script src="/js/index.js"></script>
+<script type="text/javascript" src="/js/sea-debug.js"></script>
 <script type="text/javascript">
     seajs.config({
         base:'/resources/static/js/',
@@ -210,5 +212,10 @@
     });
 </script>
 
-<span style="display:none"><script src="./购物车-军武游戏商城_files/z_stat.php" language="JavaScript"></script><script src="./购物车-军武游戏商城_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1256834993" target="_blank" title="站长统计">站长统计</a></span>
-</body></html>
+<span style="display:none">
+    <script src="#" language="JavaScript"></script>
+    <script src="#" charset="utf-8" type="text/javascript"></script>
+    <a href="#" target="_blank" title="站长统计">站长统计</a>
+</span>
+</body>
+</html>

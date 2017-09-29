@@ -10,8 +10,8 @@
     <meta name="description" content="军武游戏商城,空中网自营的军武游戏道具礼包销售商城，其中包括坦克世界、战舰世界等空中网旗下游戏产品">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="telephone=no">
-    <link href="../../css/com.css" rel="stylesheet" type="text/css">
-    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/com.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <!--[if lte IE 8]>
@@ -21,8 +21,11 @@
 <div id="topInfo">
     <div class="maxW topshortcut">
         <!--<p></p>-->
-        <p>您好，欢迎来到军武游戏商城！请 <a href="javascript:void(0)">登录</a> / <a target="_blank" href="http://passport.kongzhong.com/acc">免费注册</a></p>
-        <p class="linkFloatRight"><a href="http://mall.kongzhong.com/MemberController/myOrder" target="_blank">我的订单</a><a href="http://mall.kongzhong.com/MemberController/queryMember" target="_blank">我的商城</a><a href="http://mall.kongzhong.com/helpController/helpCenter" target="_blank">帮助中心</a></p>
+        <input type="hidden" value="${userLogin.uName}" id="pan">
+        <p id="nouser" >您好，欢迎来到军武游戏商城！请 <a href="javascript:void(0)" id="userlogin">登录</a> / <a target="_blank" href="/login.do">免费注册</a></p>
+        <p id="onuser" style="display: none">您好，欢迎<a href="javascript:void(0)" id="userlogin1" >${userLogin.uName}</a>来到军武游戏商城！<a href="/tuichu.do">退出</a></p>
+        <p class="linkFloatRight" id="nol"><a href="/order.do" target="_blank">我的订单</a><a href="/nom.do" target="_blank">我的商城</a><a href="/help.do" target="_blank">帮助中心</a></p>
+        <p class="linkFloatRight"  id="onl"><a href="/order.do" target="_blank">我的订单</a><a href="/nom.do" target="_blank">我的商城</a><a href="/help.do" target="_blank">帮助中心</a></p>
     </div>
 </div>
 <!--页头 结束--> <link rel="shortcut icon" type="image/x-icon" href="http://mall.kongzhong.com/resources/static/images/wsg3232.ico">
@@ -67,7 +70,7 @@
                                 <dd><a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,">坦克</a><span>&gt;</span></dd>
                                 <dt>
                                     <a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21101,">C系</a>　|　<a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21102,">Y系</a>　|　<a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21103,">S系</a>　|　<a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21104,">D系</a>　|　<a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21105,">M系</a>　|　<a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21107,">R系</a>　|　<a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21106,">F系</a>　|　<a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21108,">J系</a>　|　<a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21100,21109,">V系</a>　　
-                                </dt>
+                       s        </dt>
                             </dl>
                             <dl>
                                 <dd><a href="http://mall.kongzhong.com/product/list?catID=,20000,21000,21200,">金币弹</a><span>&gt;</span></dd>
@@ -366,8 +369,9 @@
         </div>
     </div>
 </div>
-<!--页脚 结束--><script type="text/javascript" src="../../js/refer.js"></script>
-<script type="text/javascript" src="../../js/sea.js"></script>
+<!--页脚 结束--><script type="text/javascript" src="/js/refer.js"></script>
+<script type="text/javascript" src="/js/sea.js"></script>
+<script src="/js/index.js"></script>
 <script type="text/javascript">
     seajs.config({
         base:'/resources/static/js/',
@@ -381,6 +385,10 @@
 
     });
 </script>
-<span style="display:none"><script src="./【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城_files/z_stat.php" language="JavaScript"></script><script src="./【本周热荐】【新车首发】AMX 105 突击型 - 军武游戏商城_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1256834993" target="_blank" title="站长统计">站长统计</a></span>
+<span style="display:none">
+    <script src="#" language="JavaScript"></script>
+    <script src="#" charset="utf-8" type="text/javascript"></script>
+    <a href="#" target="_blank" title="站长统计">站长统计</a>
+</span>
 </body>
 </html>

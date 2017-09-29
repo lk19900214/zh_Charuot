@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>军武游戏商城</title>
     <meta name="keywords" content="军武游戏商城,军武游戏,空中网,战争三部曲商城,特惠商城,坦克世界,战舰世界,装甲风暴">
@@ -340,8 +341,11 @@
 <div id="topInfo">
     <div class="maxW topshortcut">
         <!--<p></p>-->
-        <p>您好，欢迎来到军武游戏商城！请 <a href="javascript:void(0)">登录</a> / <a target="_blank" href="http://passport.kongzhong.com/acc">免费注册</a></p>
-        <p class="linkFloatRight"><a href="/MemberController/myOrder" target="_blank">我的订单</a><a href="/MemberController/queryMember" target="_blank">我的商城</a><a href="/helpController/helpCenter" target="_blank">帮助中心</a></p>
+        <input type="hidden" value="${userLogin.uName}" id="pan">
+        <p id="nouser" >您好，欢迎来到军武游戏商城！请 <a href="javascript:void(0)" id="userlogin">登录</a> / <a target="_blank" href="/login.do">免费注册</a></p>
+        <p id="onuser" style="display: none">您好，欢迎<a href="javascript:void(0)" id="userlogin1" >${userLogin.uName}</a>来到军武游戏商城！<a href="/tuichu.do">退出</a></p>
+        <p class="linkFloatRight" id="nol"><a href="/order.do" target="_blank">我的订单</a><a href="/nom.do" target="_blank">我的商城</a><a href="/help.do" target="_blank">帮助中心</a></p>
+        <p class="linkFloatRight"  id="onl"><a href="/order.do" target="_blank">我的订单</a><a href="/nom.do" target="_blank">我的商城</a><a href="/help.do" target="_blank">帮助中心</a></p>
     </div>
 </div>
 <!--页头 结束-->
@@ -1256,5 +1260,9 @@
 </script>
 <script type="text/javascript" src="/js/style.js"></script>
 <script type="text/javascript" src="/js/refer.js"></script>
-<span style="display:none"><script src="https://s4.cnzz.com/z_stat.php?id=1256834993&web_id=1256834993" language="JavaScript"></script></span></body>
+<script type="text/javascript" src="/js/index.js"></script>
+<span style="display:none">
+    <script src="#" language="JavaScript"></script>
+</span>
+</body>
 </html>

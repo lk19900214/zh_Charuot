@@ -105,4 +105,21 @@ public class UserController {
      return 1;
     }
 
+    @RequestMapping("/tuichu.do")
+    public String uExit(HttpSession session){
+        session.removeAttribute("userLogin");
+        return "index";
+    }
+    @RequestMapping("/nom.do")
+    public String myNom(){
+        return "nom";
+    }
+    @RequestMapping("/order.do")
+    public String myOrder(){
+        return "order";
+    }
+    @RequestMapping("/help.do")
+    public String helpCenter(){
+        return "help";
+    }
 }
