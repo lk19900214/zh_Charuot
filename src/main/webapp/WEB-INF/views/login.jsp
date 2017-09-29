@@ -102,16 +102,16 @@
                                     <span class="icoTip"></span><span class="errorM">请填写正确的信息</span>
                                 </div>
                                 <div class="nameArea tips-top">
-                                    <span class="icoName"></span> <label class="inputTip">请输入账号</label>
-                                    <input type="text" class="input" autocomplete="off" maxlength="30" id="user_id_txt" name="account"/>
-                                    <span class="icoClean"></span>
+                                    <span class="icoName" ></span> <label class="inputTip" id="user" ></label>
+                                    <input type="text" class="input" autocomplete="off" maxlength="30" id="user_id_txt" name="account" onblur="userAccount()" placeholder="" />
+                                    <span class="icoClean" ></span>
                                 </div>
                                 <div class="pwdArea">
-                                    <span class="icoPwd"></span> <label class="inputTip">请输入登录密码</label>
+                                    <span class="icoPwd" ></span> <label class="inputTip" id="password"></label>
                                     <input type="password" class="input" autocomplete="off"
                                            oncontextmenu="return false" onpaste="return false"
-                                           maxlength="16" id="password_txt"/>
-                                    <span class="icoClean"></span>
+                                           maxlength="16" id="password_txt" onblur="userPassword()"/>
+                                    <span class="icoClean" ></span>
                                 </div>
                                 <div id="vcode_area" class="yzimgArea" style='display: none;'>
                                     <span class="icoImg"></span> <label class="inputTip">请输入验证码</label>
@@ -121,14 +121,13 @@
                                         <img id="verif_codeimg" src="" style="cursor:pointer">
                                     </div>
                                 </div>
-                                <a href="javascript:void(0)" class="btn btn-default load" id="login">登
-                                    录<span class="dotting"><i></i><i></i><i></i> </span> </a>
+                                <a href="javascript:void(0)" class="btn btn-default load" id="login">登录<span class="dotting"><i></i><i></i><i></i></span></a>
                                 <div class="nav-link clearfix">
                                     <p class="link-left">
                                         没有账号？<a href="/register.do" style="color:#ed6d00">立即注册</a>
                                     </p>
                                     <p class="link-right">
-                                        <a href="/pwdback/pwdemailback/pwdback_email">忘记密码</a>
+                                        <a href="forget.jsp">忘记密码</a>
                                     </p>
                                 </div>
                             </div>

@@ -5,6 +5,7 @@ import com.zh.service.UserService;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -78,7 +79,7 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "/userlogin.do", method = RequestMethod.POST)
+    @RequestMapping(value = "/userlogin.do")
     @ResponseBody
     public int userLogin(UserDo userdo) {
         UserDo ua = user.selectOne(userdo);
@@ -87,6 +88,21 @@ public class UserController {
         } else {
             return 1;//未注册
         }
+    }
+    @RequestMapping("/uLogin.action") @ResponseBody
+    public int uLogin(UserDo userDo,HttpSession session){
+        UserDo ud = user.selectOne(userDo);
+        if(ud!=null){
+            session.setAttribute("userLogin",ud);
+            return 1;
+        }else {
+            return 0;
+        }
+
+    }
+    @RequestMapping("/forget.do") @ResponseBody
+    public int forget(UserDo userDo){
+     return 1;
     }
 
 }
